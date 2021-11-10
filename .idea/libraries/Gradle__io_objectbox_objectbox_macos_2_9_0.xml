@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.objectbox:objectbox-macos:2.9.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.objectbox/objectbox-macos/2.9.0/1a5dc01464fe66b4f5c0a169e59f6c7799662b83/objectbox-macos-2.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.objectbox/objectbox-macos/2.9.0/e763d38d47389f045dc0f189267af0f68cfeb757/objectbox-macos-2.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

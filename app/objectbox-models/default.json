@@ -1,0 +1,58 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3347806687984436199",
+      "lastPropertyId": "6:4583361809179826703",
+      "name": "CovidCard",
+      "properties": [
+        {
+          "id": "1:6309630587448088470",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7017697032676417217",
+          "name": "vaccine",
+          "type": 9
+        },
+        {
+          "id": "3:3145998122245890402",
+          "name": "Manufacturer",
+          "type": 9
+        },
+        {
+          "id": "4:5746838700047589352",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "5:8523341645522578843",
+          "name": "ClinicSite",
+          "type": 9
+        },
+        {
+          "id": "6:4583361809179826703",
+          "name": "isVaxinated",
+          "type": 1,
+          "flags": 4
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:3347806687984436199",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

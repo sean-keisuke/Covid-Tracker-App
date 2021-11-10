@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'io.objectbox'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.sean.p3"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "COVID_WEB_SERVER", "\"https://api.covidtracking.com/v1/\"")
+            resValue("string", "debug_button", "Debug Button")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "COVID_WEB_SERVER", "\"https://api.covidtracking.com/v1/\"")
+            resValue("string", "debug_button", "Release Button")
+        }
+        staging {
+            buildConfigField("String", "COVID_WEB_SERVER", "\"https://api.covidtracking.com/v1/\"")
+            resValue("string", "debug_button", "Staging Button")
+        }
+        qa {
+            buildConfigField("String", "COVID_WEB_SERVER", "\"https://api.covidtracking.com/v1/\"")
+            resValue("string", "debug_button", "Staging Button")
+        }
+        dev {
+            buildConfigField("String", "COVID_WEB_SERVER", "\"https://api.covidtracking.com/v1/\"")
+            resValue("string", "debug_button", "Debug Button")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.wear:wear:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "io.objectbox:objectbox-kotlin:$objectboxVersion"
+}

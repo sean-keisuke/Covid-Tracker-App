@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/state_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/CovidPositiveDataTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <Button
+        android:id="@+id/cameraActivityButton"
+        android:layout_width="139dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="#000"
+        android:text="@string/camera_prompt_vaccine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CovidPositiveTextView"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <Button
+        android:id="@+id/positiveCovidFragment"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/covid_positive"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/CovidPositiveDataTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <Button
+        android:id="@+id/covidDeathFragment"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/covid_death"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/CovidPositiveDataTitle"
+        app:layout_constraintEnd_toEndOf="@+id/state_spinner"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/positiveCovidFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <FrameLayout
+        android:id="@+id/covidStatFragment"
+        android:layout_width="347dp"
+        android:layout_height="482dp"
+        app:layout_constraintBottom_toTopOf="@+id/cameraActivityButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/covidDeathFragment" />
+
+    <ProgressBar
+        android:id="@+id/loadingSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="177dp"
+        android:layout_height="139dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/covid_history_activity_button"
+        android:layout_width="179dp"
+        android:layout_height="69dp"
+        android:text="@string/covid_history_activity_button"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraActivityButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toEndOf="@+id/cameraActivityButton"
+        app:layout_constraintTop_toBottomOf="@+id/covidStatFragment"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
