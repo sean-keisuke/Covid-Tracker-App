@@ -29,7 +29,7 @@ A user can check current covid data for any state they choose by using the selec
 
 ![Alt text](ReadmeScreenshots/CovidHistoryPage.png "Optional Title")
 
-![Alt text](ReadmeScreenshots/CovidStatusPage.png"Optional Title")
+![Alt text](ReadmeScreenshots/CovidStatusPage.png "Optional Title")
 
 # Keywords:
 Covid, Information, Data, Positive, Negative, Death, Coronavirus, Vaccine, Pfizer, Moderna, Johnson&Johnson, J&J
